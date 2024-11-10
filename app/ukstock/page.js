@@ -325,10 +325,17 @@ export default function Home() {
             style={{
               marginTop: "10px",
               marginBottom: "0px",
-              fontSize: "1.4rem",
+              fontSize: "1.6rem",
+              padding: "4px 14px", // Adjust padding as needed
+              display: "inline-block", // Makes border fit tightly around content
+              //fontWeight: "bold",
+              //borderRadius: "5px",
+              //background: "green",
+              color: "black",
+              fontFamily: "sans-serif",
             }}
           >
-            {userName}&apos;s...
+            {userName}&apos;s
           </p>
         ) : (
           <p>Loading user information...</p>

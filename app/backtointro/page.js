@@ -6,7 +6,7 @@ import Link from "next/link";
 const Introduction = () => {
   return (
     <div className={styles.introduction}>
-      <h1 className={styles.heading}>Welcome to the Portfolio Manager App</h1>
+      <h1 className={styles.heading}>Portfolio Manager App</h1>
       <p className={styles.description}>
         This app allows you to manage and monitor your stock portfolio easily.
         You can add, edit, and delete stocks from your portfolio, track their

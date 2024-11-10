@@ -9,6 +9,32 @@ const Introduction = () => {
   const [hideIntroductionChecked, setHideIntroductionChecked] = useState(false);
   const router = useRouter();
 
+  const [userName, setUserName] = useState(null);
+
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      try {
+        const response = await fetch("/api/userName", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setUserName(data.fullName);
+        } else {
+          console.error("Failed to fetch user information");
+        }
+      } catch (error) {
+        console.error("Error fetching user information:", error);
+      }
+    };
+
+    fetchUserInfo();
+  }, []);
+
+  const firstName = userName ? userName.split(" ")[0] : null;
+
   // Check localStorage to determine if the user has opted out
   useEffect(() => {
     const hideIntro = localStorage.getItem("hideIntroduction");
@@ -37,7 +63,16 @@ const Introduction = () => {
 
   return (
     <div className={styles.introduction}>
-      <h1 className={styles.heading}>Welcome to the Portfolio Manager App</h1>
+      <h1 className={styles.heading}>
+        Hello {firstName}, <br /> welcome to your portfolio manager app
+      </h1>
+      {/*<div>
+        {firstName ? (
+          <p>Welcome, {firstName}!</p>
+        ) : (
+          <p>Loading user information...</p>
+        )}
+      </div>*/}
       <p className={styles.description}>
         This app allows you to manage and monitor your stock portfolio easily.
         You can add, edit, and delete stocks from your portfolio, track their
