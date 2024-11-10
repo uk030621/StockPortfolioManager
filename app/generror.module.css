@@ -1,0 +1,67 @@
+/* page.module.css */
+
+/* General styling for the error page */
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+    background-color: #f8f9fa; /* Light grey background for a professional feel */
+    text-align: center;
+  }
+  
+  /* Styling for the error title */
+  .errorTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling for the error message */
+  .errorMessage {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Suggestion text styling */
+  .suggestion {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button styling */
+  .goBackButton {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff; /* Professional blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .goBackButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .errorTitle {
+      font-size: 2.2rem;
+    }
+  
+    .errorMessage {
+      font-size: 1.2rem;
+    }
+  
+    .suggestion {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,115 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for h1 through a class */
+  .heading {
+    color: #333;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for paragraphs through a class */
+  .description {
+    color: #555;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 90%; /* Ensure it doesn't overflow on small screens */
+  }
+  
+  /* Unordered list and items */
+  .list {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .listItem {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Checkbox container */
+  .checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .checkboxContainer label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .checkboxContainer input {
+    margin-right: 10px;
+  }
+  
+  /* Continue button */
+  .continueButton {
+    background-color: #0070f3;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continueButton:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Responsive adjustments for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .introduction {
+      padding: 15px;
+      max-width: 100%; /* Ensure it doesn't overflow */
+      margin: 20px;
+    }
+  
+    .heading {
+      font-size: 2rem; /* Slightly reduce the heading size */
+    }
+  
+    .description, .listItem {
+      font-size: 1.1rem; /* Keep text size readable */
+    }
+  
+    .continueButton {
+      font-size: 0.9rem; /* Reduce button font size */
+      padding: 8px 16px; /* Smaller padding for smaller screens */
+    }
+  }
+  
+  /* Further adjustments for mobile devices (small smartphones) */
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 1.8rem; /* Further reduce heading size */
+    }
+  
+    .description, .listItem {
+      font-size: 1rem;
+    }
+  
+    .continueButton {
+      font-size: 0.85rem;
+      padding: 6px 12px; /* Tighter button for small screens */
+    }
+  }
+   

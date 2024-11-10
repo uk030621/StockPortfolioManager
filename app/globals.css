@@ -1,0 +1,388 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  /*background-color: #c8f3c8;*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.return-link-backtointro{
+  text-decoration: none;
+  font-size: medium;
+  margin-left: 10px;
+  color:grey
+}
+
+.return-link-backtointro:hover{
+  color:black;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+.login-button{
+  background-color:green;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-button:hover{
+  font-size: 1.3rem;
+  background-color: green;
+}
+
+
+.reg-button{
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.reg-button:hover{
+  font-size: 1.3rem;
+  background-color: green;
+}
+
+
+.register-link{
+  margin-top: 25px;
+  color:white;
+
+}
+
+.register-link:hover{
+  font-size: 1.3rem;
+  color: white;
+}
+
+
+.logout-confirm-link{
+  text-decoration: none;
+  font-size: medium;
+  margin-left: 10px;
+  color:grey
+}
+
+.logout-confirm-link:hover{
+  color:black;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+.login-link{
+  margin-top: 25px;
+  color: white;
+}
+
+.login-link:hover{
+  font-size: 1.3rem;
+}
+
+
+
+.currency-converter-heading{
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+.currency-link{
+  text-decoration: none;
+  font-size: small;
+  margin-right: 20px;
+  color:grey
+}
+
+.currency-link:hover{
+  color:black;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.currency-input{
+  padding: 7px 8px;
+  font-size: 17px;
+  width: 120px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Set a consistent border color */
+}
+
+.selector{
+  padding: 6px 8px;
+  margin-left: 4px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Set a consistent border color */
+}
+
+.convert-button{
+  padding: 6px 8px;
+  margin-left: 4px;
+  margin-bottom: 60px;
+}
+
+
+.home-link{
+  text-decoration: none;
+  color: grey;
+  margin-right: 10px;
+  margin-top: 45px;
+}
+
+.home-link:hover{
+  color:black;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: large;
+}
+
+
+.hyperlink1{
+  text-decoration: none;
+  margin-right: 190px;
+  font-size: 0.85rem;
+  color: black;
+  font-weight: bold;
+}
+
+.hyperlink1:hover{
+  text-decoration: underline;
+  font-weight: bolder;
+  color: black;
+}
+
+.symbol-lookup{
+  color:grey;
+}
+
+
+.statistics{
+  color:grey;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+button{
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+}
+
+.input-stock-button{
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  font-size: 0.8rem;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+
+button:hover{
+  background-color: hsl(0, 1%, 21%);
+}
+
+.heading{
+  color:black;
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.sub-heading{
+  color: black;
+  font-size: 1.2rem;
+}
+
+.table-heading{
+  color: black;
+}
+
+.refresh-button{
+  padding: 10px 12px;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.total-value{
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.inputs {
+  font-size: 17px;
+  border: 1px solid #ccc; /* Set a consistent border color */
+  border-radius: 4px; /* Optional: Adds rounded corners */
+  padding: 8px; /* Add some padding for better appearance */
+  box-shadow: none; /* Remove any default shadow */
+  outline: none; /* Remove the default focus outline */
+  background-color: #fff; /* Ensure background color is white */
+  color: #333; /* Set the text color */
+  margin-left: 10px;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.inputs:focus {
+  border-color: black; /* Optional: Change border color on focus */
+}
+
+
+.edit-button{
+  padding: 5px 12px;
+  margin-bottom: 8px;
+}
+
+.delete-button{
+  
+  padding: 5px 5px;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.neutral {
+  color: black;
+}
+
+.baseline-value{
+  color: gray;
+  margin-bottom: 2px;
+  font-size: 0.9rem;
+}
+
+.asiastock-link{
+  text-decoration: none;
+  font-size: small;
+  color: grey;
+  margin-left: 20px;
+}
+
+.asiastock-link:hover{
+  color: black;
+  font-weight: bolder;
+}
+
+.usstock-link{
+  text-decoration: none;
+  font-size: small;
+  color: grey;
+}
+
+.usstock-link:hover{
+  color: black;
+  font-weight: bolder;
+}
+
+.ukstock-link{
+  margin-left: 10px;
+  text-decoration: none;
+  color: grey;
+}
+
+.ukstock-link:hover{
+  color: black;
+  font-weight: bolder;
+}
+
+
+a.stock-symbol-search{
+  margin-bottom: 20px;
+}
+
+.stock-symbol-search{
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: small;
+  color:grey
+}
+
+.stock-symbol-search:hover{
+  color: black;
+  font-weight: bolder;
+}
+
+.uk-pic{
+  border-radius: 7px;
+}
+
+.selected-symbol{
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 7px;
+}
+
+.return-to-stock{
+  margin-right: 10px;
+  font-size: small;
+}
+
+.stock-label{
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.submit-baseline-button{
+  padding: 7px;
+  margin-left: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  
+  
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  color: #666;
+  margin-top: 10px;
+  margin-right: 40px;
+  font-size: small;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+.green {
+  background-color: #d4edda; /* Light green */
+  color: green;
+}
+
+.red {
+  background-color: #f8d7da; /* Light red */
+  color: red;
+}
+
+.neutral {
+  background-color: white; /* Neutral color */
+  color: black;
+}

@@ -1,0 +1,198 @@
+[{
+  "_id": {
+    "$oid": "66d5ae88cea0e0d5f1347536"
+  },
+  "symbol": "SHEL.L",
+  "sharesHeld": 534,
+  "pricePerShare": "25.16",
+  "totalValue": "1343544.00"
+},
+{
+  "_id": {
+    "$oid": "66d5aea4cea0e0d5f1347537"
+  },
+  "symbol": "NG.L",
+  "sharesHeld": 1521,
+  "pricePerShare": "10.20",
+  "totalValue": "1550659.50"
+},
+{
+  "_id": {
+    "$oid": "66d5aecfcea0e0d5f1347538"
+  },
+  "symbol": "SVT.L",
+  "sharesHeld": 425,
+  "pricePerShare": "27.10",
+  "totalValue": "1151750.00"
+},
+{
+  "_id": {
+    "$oid": "66d5aef2cea0e0d5f1347539"
+  },
+  "symbol": "LLOY.L",
+  "sharesHeld": 16493,
+  "pricePerShare": "0.56",
+  "totalValue": "930535.06"
+},
+{
+  "_id": {
+    "$oid": "66d5af0ccea0e0d5f134753a"
+  },
+  "symbol": "UU.L",
+  "sharesHeld": 764,
+  "pricePerShare": "10.68",
+  "totalValue": "815952.00"
+},
+{
+  "_id": {
+    "$oid": "66d5af28cea0e0d5f134753b"
+  },
+  "symbol": "BP.L",
+  "sharesHeld": 1500,
+  "pricePerShare": "4.06",
+  "totalValue": "608550.00"
+},
+{
+  "_id": {
+    "$oid": "66d5af54cea0e0d5f134753c"
+  },
+  "symbol": "SGE.L",
+  "sharesHeld": 475,
+  "pricePerShare": "9.85",
+  "totalValue": "467970.00"
+},
+{
+  "_id": {
+    "$oid": "66d5af8ccea0e0d5f134753d"
+  },
+  "symbol": "BT-A.L",
+  "sharesHeld": 2050,
+  "pricePerShare": "1.43",
+  "totalValue": "293765.00"
+},
+{
+  "_id": {
+    "$oid": "66d5afb7cea0e0d5f134753e"
+  },
+  "symbol": "AV.L",
+  "sharesHeld": 505,
+  "pricePerShare": "4.88",
+  "totalValue": "246642.00"
+},
+{
+  "_id": {
+    "$oid": "66d5afd5cea0e0d5f134753f"
+  },
+  "symbol": "FGP.L",
+  "sharesHeld": 1562,
+  "pricePerShare": "1.57",
+  "totalValue": "245702.60"
+},
+{
+  "_id": {
+    "$oid": "66d5b0f2cea0e0d5f1347540"
+  },
+  "symbol": "GRG.L",
+  "sharesHeld": 500,
+  "pricePerShare": "31.14",
+  "totalValue": "1557000.00"
+},
+{
+  "_id": {
+    "$oid": "66d5b261cea0e0d5f1347541"
+  },
+  "symbol": "CNA.L",
+  "sharesHeld": 1761,
+  "pricePerShare": "1.21",
+  "totalValue": "212464.65"
+},
+{
+  "_id": {
+    "$oid": "66d5c5aae2a4f0eb0bef694b"
+  },
+  "symbol": "IMB.L",
+  "sharesHeld": 83,
+  "pricePerShare": "22.29",
+  "totalValue": "185007.00"
+},
+{
+  "_id": {
+    "$oid": "66d5c6030f52a7f79fd55b7c"
+  },
+  "symbol": "BARC.L",
+  "sharesHeld": 795,
+  "pricePerShare": "2.21",
+  "totalValue": "175575.75"
+},
+{
+  "_id": {
+    "$oid": "66d5c665fac4fc00462944ab"
+  },
+  "symbol": "MKS.L",
+  "sharesHeld": 453,
+  "pricePerShare": "3.48",
+  "totalValue": "157508.10"
+},
+{
+  "_id": {
+    "$oid": "66d5c6fbc2f254b4d2f33bcd"
+  },
+  "symbol": "IAG.L",
+  "sharesHeld": 775,
+  "pricePerShare": "1.89",
+  "totalValue": "146591.25"
+},
+{
+  "_id": {
+    "$oid": "66d5c7329d4753721c168de1"
+  },
+  "symbol": "GSK.L",
+  "sharesHeld": 46,
+  "pricePerShare": "16.52",
+  "totalValue": "75969.00"
+},
+{
+  "_id": {
+    "$oid": "66d5c7622198e775ba79ba5a"
+  },
+  "symbol": "CCL.L",
+  "sharesHeld": 46,
+  "pricePerShare": "10.89",
+  "totalValue": "50094.00"
+},
+{
+  "_id": {
+    "$oid": "66d5c79de2a4f0eb0bef694c"
+  },
+  "symbol": "VOD.L",
+  "sharesHeld": 477,
+  "pricePerShare": "0.76",
+  "totalValue": "36471.42"
+},
+{
+  "_id": {
+    "$oid": "66d5c7eb7ef0fe1b1af83b7f"
+  },
+  "symbol": "HLN.L",
+  "sharesHeld": 58,
+  "pricePerShare": "3.90",
+  "totalValue": "22602.60"
+},
+{
+  "_id": {
+    "$oid": "66d5c8215a1ee1295b19b1fc"
+  },
+  "symbol": "ENT.L",
+  "sharesHeld": 23,
+  "pricePerShare": "6.39",
+  "totalValue": "14706.20"
+},
+{
+  "_id": {
+    "$oid": "66d5e113dc2be73af46c20e8"
+  },
+  "symbol": "BATS.L",
+  "sharesHeld": 500,
+  "pricePerShare": "29.29",
+  "totalValue": "1464500.00"
+}]
