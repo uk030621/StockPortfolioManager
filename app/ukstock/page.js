@@ -127,10 +127,13 @@ export default function Home() {
   useEffect(() => {
     const absoluteDeviation = totalPortfolioValue - baselinePortfolioValue;
 
+    // Check if baselinePortfolioValue is not zero to calculate percentageChange
     const percentageChange =
-      ((totalPortfolioValue - baselinePortfolioValue) /
-        baselinePortfolioValue) *
-      100;
+      baselinePortfolioValue !== 0
+        ? ((totalPortfolioValue - baselinePortfolioValue) /
+            baselinePortfolioValue) *
+          100
+        : 0;
 
     setDeviation({
       absoluteDeviation,
