@@ -453,7 +453,7 @@ export default function Home() {
         <Link
           className="usstock-link"
           style={{ margin: "top", marginRight: "25px" }}
-          href="https://lwj-crypto-tracker-app.vercel.app/"
+          href="https://general-crypto-listing.vercel.app/"
           replace
         >
           Crypto
