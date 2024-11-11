@@ -354,7 +354,7 @@ export default function Home() {
         <span style={{ display: "inline-flex", alignItems: "center" }}>
           <Image
             className="uk-pic"
-            src="/UKFLAG.jpg"
+            src="/british.jpg"
             alt="Portfolio Image"
             width={40}
             height={40}
