@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,6 +11,8 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+
+  const router = useRouter(); // Initialize useRouter
 
   // Helper function to capitalize the first letter of each word
   const capitalizeWords = (input) => {
@@ -42,6 +45,9 @@ export default function SignupPage() {
         setEmail("");
         setPassword("");
         setError("");
+
+        // Redirect to the login page upon successful signup
+        router.push("/login");
       } else {
         setError(data.error);
         setMessage("");
