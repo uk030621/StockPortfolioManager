@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,6 +10,18 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+
+  // Helper function to capitalize the first letter of each word
+  const capitalizeWords = (input) => {
+    return input.replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
+  // useEffect to capitalize the name when it changes
+  useEffect(() => {
+    if (fullName) {
+      setFullName(capitalizeWords(fullName));
+    }
+  }, [fullName]);
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -26,6 +38,9 @@ export default function SignupPage() {
 
       if (res.ok) {
         setMessage(data.message);
+        setFullName("");
+        setEmail("");
+        setPassword("");
         setError("");
       } else {
         setError(data.error);

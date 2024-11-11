@@ -126,6 +126,7 @@ export default function Home() {
 
   useEffect(() => {
     const absoluteDeviation = totalPortfolioValue - baselinePortfolioValue;
+
     const percentageChange =
       ((totalPortfolioValue - baselinePortfolioValue) /
         baselinePortfolioValue) *
@@ -325,7 +326,7 @@ export default function Home() {
             style={{
               marginTop: "10px",
               marginBottom: "0px",
-              fontSize: "1.6rem",
+              fontSize: "1.2rem",
               padding: "4px 14px", // Adjust padding as needed
               display: "inline-block", // Makes border fit tightly around content
               //fontWeight: "bold",
@@ -335,7 +336,7 @@ export default function Home() {
               fontFamily: "sans-serif",
             }}
           >
-            {userName}&apos;s
+            Manager: <span style={{ fontWeight: "bold" }}>{userName}</span>
           </p>
         ) : (
           <p>Loading user information...</p>

@@ -31,7 +31,7 @@ export async function GET(req) {
       .findOne({ email });
 
     return NextResponse.json({
-      baselinePortfolioValue: settings?.baselinePortfolioValue || 100000,
+      baselinePortfolioValue: settings?.baselinePortfolioValue || 0,
     });
   } catch (error) {
     console.error("Error fetching baseline portfolio value:", error);

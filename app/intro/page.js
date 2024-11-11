@@ -1,15 +1,14 @@
-"use client"; // This tells Next.js that this component should be rendered on the client side
+"use client";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import styles from "./page.module.css"; // Import your CSS module
+import styles from "./page.module.css";
 
 const Introduction = () => {
   const [showIntroduction, setShowIntroduction] = useState(true);
   const [hideIntroductionChecked, setHideIntroductionChecked] = useState(false);
-  const router = useRouter();
-
   const [userName, setUserName] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -22,6 +21,12 @@ const Introduction = () => {
         if (response.ok) {
           const data = await response.json();
           setUserName(data.fullName);
+          if (data.hideIntroduction) {
+            router.push("/ukstock");
+          } else {
+            setShowIntroduction(true);
+          }
+          setHideIntroductionChecked(data.hideIntroduction);
         } else {
           console.error("Failed to fetch user information");
         }
@@ -31,48 +36,39 @@ const Introduction = () => {
     };
 
     fetchUserInfo();
-  }, []);
-
-  const firstName = userName ? userName.split(" ")[0] : null;
-
-  // Check localStorage to determine if the user has opted out
-  useEffect(() => {
-    const hideIntro = localStorage.getItem("hideIntroduction");
-    if (hideIntro === "true") {
-      router.push("/ukstock"); // Redirect immediately if the introduction is set to be hidden
-    } else {
-      setShowIntroduction(true); // Show the introduction if not opted out
-    }
-  }, [router]);
+  }, []); // Avoid unnecessary re-renders
 
   const handleCheckboxChange = (e) => {
     setHideIntroductionChecked(e.target.checked);
   };
 
-  const handleContinue = () => {
-    if (hideIntroductionChecked) {
-      localStorage.setItem("hideIntroduction", "true");
+  const handleContinue = async () => {
+    try {
+      // Save the hideIntroduction preference in MongoDB
+      await fetch("/api/userName", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ hideIntroduction: hideIntroductionChecked }),
+      });
+
+      setShowIntroduction(false);
+      router.push("/ukstock"); // Redirect to homepage or another default page
+    } catch (error) {
+      console.error("Error updating hideIntroduction preference:", error);
     }
-    setShowIntroduction(false);
-    router.push("/ukstock"); // Redirect to homepage or another default page
   };
 
   if (!showIntroduction) {
     return null;
   }
 
+  const firstName = userName ? userName.split(" ")[0] : null;
+
   return (
     <div className={styles.introduction}>
       <h1 className={styles.heading}>
         Hello {firstName}, <br /> welcome to your portfolio manager app
       </h1>
-      {/*<div>
-        {firstName ? (
-          <p>Welcome, {firstName}!</p>
-        ) : (
-          <p>Loading user information...</p>
-        )}
-      </div>*/}
       <p className={styles.description}>
         This app allows you to manage and monitor your stock portfolio easily.
         You can add, edit, and delete stocks from your portfolio, track their
