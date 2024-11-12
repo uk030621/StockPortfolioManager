@@ -9,8 +9,9 @@ export default function Footer() {
   return showFooter ? (
     <footer className="footer">
       <p>
-        &copy; {new Date().getFullYear()} LWJ StockPortfolioManager. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} LWJ StockPortfolioManager.
+        <br />
+        All rights reserved.
       </p>
     </footer>
   ) : null;

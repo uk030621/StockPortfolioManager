@@ -1,4 +1,4 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   /*background-color: #c8f3c8;*/
@@ -6,38 +6,22 @@ body{
   padding: 0;
   height: 100%;
   width: 100%;
-  
 }
 
-.return-link-backtointro{
+.return-link-backtointro {
   text-decoration: none;
   font-size: medium;
   margin-left: 10px;
-  color:grey
+  color: grey;
 }
 
-.return-link-backtointro:hover{
-  color:black;
+.return-link-backtointro:hover {
+  color: black;
   font-weight: bolder;
   cursor: pointer;
 }
 
-
-.login-button{
-  background-color:green;
-  color: white;
-  font-size: 1rem;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.login-button:hover{
-  font-size: 1.3rem;
-  background-color: green;
-}
-
-
-.reg-button{
+.login-button {
   background-color: green;
   color: white;
   font-size: 1rem;
@@ -45,68 +29,75 @@ body{
   cursor: pointer;
 }
 
-.reg-button:hover{
+.login-button:hover {
   font-size: 1.3rem;
   background-color: green;
 }
 
-
-.register-link{
-  margin-top: 25px;
-  color:white;
-
+.reg-button {
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.register-link:hover{
+.reg-button:hover {
+  font-size: 1.3rem;
+  background-color: green;
+}
+
+.register-link {
+  margin-top: 25px;
+  color: white;
+}
+
+.register-link:hover {
   font-size: 1.3rem;
   color: white;
 }
 
-
-.logout-confirm-link{
+.logout-confirm-link {
   text-decoration: none;
   font-size: medium;
   margin-left: 10px;
-  color:grey
+  color: grey;
 }
 
-.logout-confirm-link:hover{
-  color:black;
+.logout-confirm-link:hover {
+  color: black;
   font-weight: bolder;
   cursor: pointer;
 }
 
-
-.login-link{
+.login-link {
   margin-top: 25px;
   color: white;
 }
 
-.login-link:hover{
+.login-link:hover {
   font-size: 1.3rem;
 }
 
-
-
-.currency-converter-heading{
+.currency-converter-heading {
   font-size: 1.3rem;
   margin-top: 30px;
 }
 
-.currency-link{
+.currency-link {
   text-decoration: none;
   font-size: small;
   margin-right: 20px;
-  color:grey
+  color: grey;
 }
 
-.currency-link:hover{
-  color:black;
+.currency-link:hover {
+  color: black;
   font-weight: bolder;
   cursor: pointer;
 }
 
-.currency-input{
+.currency-input {
   padding: 7px 8px;
   font-size: 17px;
   width: 120px;
@@ -114,7 +105,7 @@ body{
   border: 1px solid #ccc; /* Set a consistent border color */
 }
 
-.selector{
+.selector {
   padding: 6px 8px;
   margin-left: 4px;
   font-size: 17px;
@@ -122,29 +113,27 @@ body{
   border: 1px solid #ccc; /* Set a consistent border color */
 }
 
-.convert-button{
+.convert-button {
   padding: 6px 8px;
   margin-left: 4px;
   margin-bottom: 60px;
 }
 
-
-.home-link{
+.home-link {
   text-decoration: none;
   color: grey;
   margin-right: 10px;
   margin-top: 45px;
 }
 
-.home-link:hover{
-  color:black;
+.home-link:hover {
+  color: black;
   font-weight: bolder;
   cursor: pointer;
   font-size: large;
 }
 
-
-.hyperlink1{
+.hyperlink1 {
   text-decoration: none;
   margin-right: 190px;
   font-size: 0.85rem;
@@ -152,24 +141,23 @@ body{
   font-weight: bold;
 }
 
-.hyperlink1:hover{
+.hyperlink1:hover {
   text-decoration: underline;
   font-weight: bolder;
   color: black;
 }
 
-.symbol-lookup{
-  color:grey;
+.symbol-lookup {
+  color: grey;
 }
 
-
-.statistics{
-  color:grey;
+.statistics {
+  color: grey;
   margin-top: 0;
   font-size: 0.8rem;
 }
 
-button{
+button {
   background-color: black;
   color: white;
   border-radius: 7px;
@@ -177,7 +165,7 @@ button{
   border: none;
 }
 
-.input-stock-button{
+.input-stock-button {
   background-color: black;
   color: white;
   border-radius: 7px;
@@ -188,27 +176,26 @@ button{
   margin-right: 10px;
 }
 
-
-button:hover{
+button:hover {
   background-color: hsl(0, 1%, 21%);
 }
 
-.heading{
-  color:black;
+.heading {
+  color: black;
   font-size: 1.7rem;
   font-weight: bolder;
 }
 
-.sub-heading{
+.sub-heading {
   color: black;
   font-size: 1.2rem;
 }
 
-.table-heading{
+.table-heading {
   color: black;
 }
 
-.refresh-button{
+.refresh-button {
   padding: 10px 12px;
   border-radius: 7px;
   border: none;
@@ -218,8 +205,8 @@ button:hover{
   cursor: pointer;
 }
 
-.total-value{
-  color:black;
+.total-value {
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -242,14 +229,12 @@ button:hover{
   border-color: black; /* Optional: Change border color on focus */
 }
 
-
-.edit-button{
+.edit-button {
   padding: 5px 12px;
   margin-bottom: 8px;
 }
 
-.delete-button{
-  
+.delete-button {
   padding: 5px 5px;
 }
 
@@ -265,93 +250,91 @@ button:hover{
   color: black;
 }
 
-.baseline-value{
+.baseline-value {
   color: gray;
   margin-bottom: 2px;
   font-size: 0.9rem;
 }
 
-.asiastock-link{
+.asiastock-link {
   text-decoration: none;
   font-size: small;
   color: grey;
   margin-left: 20px;
 }
 
-.asiastock-link:hover{
+.asiastock-link:hover {
   color: black;
   font-weight: bolder;
 }
 
-.usstock-link{
+.usstock-link {
   text-decoration: none;
   font-size: small;
   color: grey;
 }
 
-.usstock-link:hover{
+.usstock-link:hover {
   color: black;
   font-weight: bolder;
 }
 
-.ukstock-link{
+.ukstock-link {
   margin-left: 10px;
   text-decoration: none;
   color: grey;
 }
 
-.ukstock-link:hover{
+.ukstock-link:hover {
   color: black;
   font-weight: bolder;
 }
 
-
-a.stock-symbol-search{
+a.stock-symbol-search {
   margin-bottom: 20px;
 }
 
-.stock-symbol-search{
+.stock-symbol-search {
   text-decoration: none;
   margin-right: 20px;
   font-size: small;
-  color:grey
+  color: grey;
 }
 
-.stock-symbol-search:hover{
+.stock-symbol-search:hover {
   color: black;
   font-weight: bolder;
 }
 
-.uk-pic{
+.uk-pic {
   border-radius: 7px;
 }
 
-.selected-symbol{
+.selected-symbol {
   margin-bottom: 10px;
   border: none;
   border-radius: 7px;
 }
 
-.return-to-stock{
+.return-to-stock {
   margin-right: 10px;
   font-size: small;
 }
 
-.stock-label{
+.stock-label {
   font-size: 1.6rem;
   margin-top: 0;
 }
 
-.submit-baseline-button{
+.submit-baseline-button {
   padding: 7px;
   margin-left: 4px;
 }
 
 .footer {
   text-align: center;
-  padding: 1rem;
-  
-  
+  padding: 0.5rem;
+
   position: relative;
   bottom: 0;
   width: 100%;
@@ -366,7 +349,7 @@ a.stock-symbol-search{
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 368px) {
   .footer p {
     font-size: 14px;
   }
