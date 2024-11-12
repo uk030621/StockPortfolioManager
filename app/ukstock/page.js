@@ -308,7 +308,7 @@ export default function Home() {
 
       if (response.ok) {
         // Redirect to login page after successful logout
-        window.location.href = "/login"; // This will also ensure a full page reload
+        router.push("/login");
       } else {
         console.error("Failed to logout:", response.statusText);
       }
