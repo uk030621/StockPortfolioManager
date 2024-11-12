@@ -306,8 +306,10 @@ export default function Home() {
       });
 
       if (response.ok) {
-        // Redirect to login page after successful logout
-        router.push("/login");
+        // Replace the current route without leaving it in the history
+        router.replace("/login");
+        // Then refresh the page completely to ensure a fresh state
+        window.location.reload();
       } else {
         console.error("Failed to logout:", response.statusText);
       }
