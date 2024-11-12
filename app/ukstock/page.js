@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   const [stocks, setStocks] = useState([]);
@@ -307,7 +308,7 @@ export default function Home() {
 
       if (response.ok) {
         // Redirect to login page after successful logout
-        router.push("/login");
+        window.location.href = "/login"; // This will also ensure a full page reload
       } else {
         console.error("Failed to logout:", response.statusText);
       }
