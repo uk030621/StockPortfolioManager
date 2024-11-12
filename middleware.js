@@ -8,6 +8,8 @@ export function middleware(req) {
   if (!token) {
     // Redirect to login if the user is not authenticated and trying to access protected pages
     if (
+      pathname.startsWith("/intro") ||
+      pathname.startsWith("/backtointro") ||
       pathname.startsWith("/ukstock") ||
       pathname.startsWith("/usstock") ||
       pathname.startsWith("/eustock") ||
@@ -34,5 +36,7 @@ export const config = {
     "/asiastock/:path*",
     "/signup",
     "/login",
+    "/intro", // Add this line to include the route in middleware
+    "/backtointro", // Add this line to include the route in middleware
   ],
 };

@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
 const Introduction = () => {
-  const [showIntroduction, setShowIntroduction] = useState(true);
+  const [showIntroduction, setShowIntroduction] = useState(false);
   const [hideIntroductionChecked, setHideIntroductionChecked] = useState(false);
   const [userName, setUserName] = useState(null);
+  const [loading, setLoading] = useState(true); // New loading state
   const router = useRouter();
 
   useEffect(() => {
@@ -22,9 +23,9 @@ const Introduction = () => {
           const data = await response.json();
           setUserName(data.fullName);
           if (data.hideIntroduction) {
-            router.push("/ukstock");
+            router.push("/ukstock"); // Redirect immediately if the user has hidden the intro
           } else {
-            setShowIntroduction(true);
+            setShowIntroduction(true); // Show the introduction if the user hasn't hidden it
           }
           setHideIntroductionChecked(data.hideIntroduction);
         } else {
@@ -32,11 +33,13 @@ const Introduction = () => {
         }
       } catch (error) {
         console.error("Error fetching user information:", error);
+      } finally {
+        setLoading(false); // Loading is complete
       }
     };
 
     fetchUserInfo();
-  }, []); // Avoid unnecessary re-renders
+  }, [router]);
 
   const handleCheckboxChange = (e) => {
     setHideIntroductionChecked(e.target.checked);
@@ -58,6 +61,12 @@ const Introduction = () => {
     }
   };
 
+  // Avoid rendering anything until loading is complete
+  if (loading) {
+    return null; // You could return a loader/spinner here instead
+  }
+
+  // Don't show the component if the user opted to hide the introduction
   if (!showIntroduction) {
     return null;
   }
