@@ -101,7 +101,7 @@
 /* Further adjustments for mobile devices (small smartphones) */
 @media (max-width: 480px) {
   .heading {
-    font-size: 1.2rem; /* Further reduce heading size */
+    font-size: 1.4rem; /* Further reduce heading size */
   }
 
   .description,
