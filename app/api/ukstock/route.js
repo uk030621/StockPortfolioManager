@@ -26,8 +26,8 @@ export async function GET(req) {
 
   try {
     // Check if the symbol is 'FTSE^' for direct, independent retrieval of DAX index data
-    if (symbol === "^FTSE") {
-      //console.log("Fetching FTSE^ index data...");
+    if (symbol === "^FTAS") {
+      //console.log("Fetching FTAS^ index data...");
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000); // Set 5-second timeout
 

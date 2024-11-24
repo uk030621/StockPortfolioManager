@@ -64,7 +64,7 @@ export default function Home() {
   const fetchGdaxiValue = async () => {
     try {
       console.log("Fetching Dax index value...");
-      const response = await fetch("/api/ukstock?symbol=^FTSE");
+      const response = await fetch("/api/ukstock?symbol=^FTAS");
       if (!response.ok) {
         throw new Error("Failed to fetch Dax Index value");
       }
@@ -517,7 +517,7 @@ export default function Home() {
             className="ftse-index"
             style={{ marginBottom: "20px", color: "grey", fontSize: "0.9rem" }}
           >
-            FTSE Index:{" "}
+            FTSE All Share Index:{" "}
             {gdaxiValue ? gdaxiValue.toLocaleString("en-GB") : "Loading..."}
           </h2>
         </div>
