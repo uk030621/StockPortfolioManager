@@ -9,7 +9,11 @@ async function getUserFromToken(req) {
     if (!token) throw new Error("No authentication token found");
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    return { email: decoded.email, fullName: decoded.fullName };
+
+    // Normalize email to lowercase
+    const normalizedEmail = decoded.email.trim().toLowerCase();
+
+    return { email: normalizedEmail, fullName: decoded.fullName };
   } catch (error) {
     console.error("Token verification failed:", error);
     throw new Error("Not authenticated");
@@ -22,7 +26,7 @@ export async function GET(req) {
     const client = await clientPromise;
     const db = client.db("stock_by_user");
 
-    // Find the user by email
+    // Normalize email before querying the database
     const user = await db.collection("users").findOne({ email });
 
     // Check if user document was found and log the outcome
@@ -51,6 +55,8 @@ export async function POST(req) {
 
     const client = await clientPromise;
     const db = client.db("stock_by_user");
+
+    // Normalize email before updating the database
     await db
       .collection("users")
       .updateOne({ email }, { $set: { hideIntroduction } }, { upsert: true });
