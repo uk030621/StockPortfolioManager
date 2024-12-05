@@ -24,6 +24,7 @@ export default function Home() {
 
   const [userName, setUserName] = useState(null);
 
+  //This code ensures that the user's name is fetched from the server and dynamically displayed in the component after the component has mounted.
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
@@ -294,7 +295,7 @@ export default function Home() {
   useEffect(() => {
     fetchGdaxiValue(); // Initial fetch
 
-    const intervalId = setInterval(fetchGdaxiValue, 60000); // Set interval to fetch FTSE every 60 seconds
+    const intervalId = setInterval(fetchGdaxiValue, 30000); // Set interval to fetch FTSE every 60 seconds
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []);
 

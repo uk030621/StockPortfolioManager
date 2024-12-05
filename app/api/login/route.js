@@ -11,7 +11,7 @@ export async function POST(req) {
   const { email, password } = await req.json();
 
   // Log the received credentials
-  //console.log('Received credentials:', { email, password });
+  //console.log("Received credentials:", { email, password });
 
   const client = await clientPromise;
   const db = client.db(); // Use default database from MONGODB_URI

@@ -293,7 +293,7 @@ export default function Home() {
   useEffect(() => {
     fetchGdaxiValue(); // Initial fetch
 
-    const intervalId = setInterval(fetchGdaxiValue, 60000); // Set interval to fetch FTSE every 60 seconds
+    const intervalId = setInterval(fetchGdaxiValue, 30000); // Set interval to fetch FTSE every 60 seconds
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []);
 

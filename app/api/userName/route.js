@@ -1,3 +1,4 @@
+//app/api/userName/route.js
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import clientPromise from "@/lib/mongodb";

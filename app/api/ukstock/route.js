@@ -73,6 +73,7 @@ export async function GET(req) {
     //try {
     const db = await connectToDatabase();
     const email = await getEmailFromToken(req);
+    //console.log("Hello!!! Here is the Email: ", email);
 
     if (symbol) {
       const stock = await db
