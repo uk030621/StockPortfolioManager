@@ -189,6 +189,7 @@ button:hover {
 .sub-heading {
   color: black;
   font-size: 1.2rem;
+  margin-bottom: 4px;
 }
 
 .table-heading {
@@ -368,4 +369,10 @@ a.stock-symbol-search {
 .neutral {
   background-color: white; /* Neutral color */
   color: black;
+}
+
+.total-symbols {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 7px;
 }

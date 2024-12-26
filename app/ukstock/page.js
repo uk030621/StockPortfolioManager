@@ -376,6 +376,9 @@ export default function Home() {
           })}
         </span>
       </h2>
+      <h3 className="total-symbols">
+        Total Stocks Included: <span>{stocks.length}</span>
+      </h3>
       <h4 className="baseline-value">
         Baseline: £
         {baselinePortfolioValue.toLocaleString("en-GB", {

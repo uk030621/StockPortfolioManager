@@ -190,7 +190,7 @@ export default function SignupPage() {
           </div>
         </form>
 
-        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+        {error && <p style={{ color: "pink", marginTop: "15px" }}>{error}</p>}
         {message && (
           <p style={{ color: "white", marginTop: "30px" }}>{message}</p>
         )}
