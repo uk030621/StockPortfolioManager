@@ -8,6 +8,10 @@ body {
   width: 100%;
 }
 
+td {
+  font-size: smaller;
+}
+
 .return-link-backtointro {
   text-decoration: none;
   font-size: medium;
