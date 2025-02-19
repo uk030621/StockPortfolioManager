@@ -593,36 +593,62 @@ export default function Home() {
           <tbody>
             {stocks.map((stock) => (
               <tr key={stock.symbol}>
-                <td style={{ border: "1px solid black", padding: "8px" }}>
-                  {stock.symbol}
+                <td
+                  style={{
+                    border: "1px solid black",
+                    padding: "8px",
+                    textAlign: "center",
+                  }}
+                >
+                  <a
+                    href={`https://finance.yahoo.com/quote/${stock.symbol}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: "none",
+                      color: "blue",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {stock.symbol}
+                  </a>
                 </td>
                 <td
-                  className={`price-cell ${getPriceChangeColor(
-                    stock.symbol,
-                    parseFloat(stock.pricePerShare.replace(/,/g, ""))
-                  )}`}
-                  style={{ border: "1px solid black", padding: "8px" }}
+                  style={{
+                    border: "1px solid black",
+                    padding: "8px",
+                    textAlign: "center",
+                  }}
                 >
                   {stock.pricePerShare}
                 </td>
-
-                <td style={{ border: "1px solid black", padding: "8px" }}>
+                <td
+                  style={{
+                    border: "1px solid black",
+                    padding: "8px",
+                    textAlign: "center",
+                  }}
+                >
                   {stock.sharesHeld}
                 </td>
-                <td style={{ border: "1px solid black", padding: "8px" }}>
+                <td
+                  style={{
+                    border: "1px solid black",
+                    padding: "8px",
+                    textAlign: "center",
+                  }}
+                >
                   {stock.totalValue}
                 </td>
-                <td style={{ border: "1px solid black", padding: "8px" }}>
-                  <button
-                    className="edit-button"
-                    onClick={() => startEditing(stock)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className="delete-button"
-                    onClick={() => deleteStock(stock.symbol)}
-                  >
+                <td
+                  style={{
+                    border: "1px solid black",
+                    padding: "8px",
+                    textAlign: "center",
+                  }}
+                >
+                  <button onClick={() => startEditing(stock)}>Edit</button>
+                  <button onClick={() => deleteStock(stock.symbol)}>
                     Delete
                   </button>
                 </td>
