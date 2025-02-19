@@ -236,11 +236,22 @@ button:hover {
 
 .edit-button {
   padding: 5px 12px;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
+  background-color: white;
+  font-size: large;
+}
+
+.edit-button:hover {
+  background-color: white;
 }
 
 .delete-button {
   padding: 5px 5px;
+  background-color: white;
+}
+
+.delete-button:hover {
+  background-color: white;
 }
 
 .positive {

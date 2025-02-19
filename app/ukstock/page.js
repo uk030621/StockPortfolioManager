@@ -647,9 +647,17 @@ export default function Home() {
                     textAlign: "center",
                   }}
                 >
-                  <button onClick={() => startEditing(stock)}>Edit</button>
-                  <button onClick={() => deleteStock(stock.symbol)}>
-                    Delete
+                  <button
+                    className="edit-button"
+                    onClick={() => startEditing(stock)}
+                  >
+                    ✍️
+                  </button>
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteStock(stock.symbol)}
+                  >
+                    ❌
                   </button>
                 </td>
               </tr>
