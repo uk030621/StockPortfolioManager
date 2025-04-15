@@ -91,7 +91,7 @@ td {
 .currency-link {
   text-decoration: none;
   font-size: small;
-  margin-right: 20px;
+  margin-right: 0px;
   color: grey;
 }
 
@@ -219,13 +219,13 @@ button:hover {
 .inputs {
   font-size: 17px;
   border: 1px solid #ccc; /* Set a consistent border color */
-  border-radius: 4px; /* Optional: Adds rounded corners */
+  border-radius: 0px; /* Optional: Adds rounded corners */
   padding: 8px; /* Add some padding for better appearance */
   box-shadow: none; /* Remove any default shadow */
   outline: none; /* Remove the default focus outline */
   background-color: #fff; /* Ensure background color is white */
   color: #333; /* Set the text color */
-  margin-left: 10px;
+  margin-left: 0px;
   margin-bottom: 4px;
   margin-top: 10px;
 }
@@ -344,7 +344,10 @@ a.stock-symbol-search {
 
 .submit-baseline-button {
   padding: 7px;
-  margin-left: 4px;
+  margin-left: 0px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  border-radius: 0px;
 }
 
 .footer {

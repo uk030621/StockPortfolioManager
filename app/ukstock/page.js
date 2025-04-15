@@ -429,35 +429,35 @@ export default function Home() {
       <div style={{ marginTop: "10px" }}>
         <Link
           className="usstock-link"
-          style={{ margin: "top", marginRight: "25px" }}
+          style={{ margin: "top", marginRight: "19px" }}
           href="/backtointro"
         >
           Intro
         </Link>
         <Link
           className="usstock-link"
-          style={{ margin: "top", marginRight: "25px" }}
+          style={{ margin: "top", marginRight: "19px" }}
           href="/eustock"
         >
           DAX
         </Link>
         <Link
           className="usstock-link"
-          style={{ margin: "top", marginRight: "25px" }}
+          style={{ margin: "top", marginRight: "19px" }}
           href="/asiastock"
         >
           Nikkei
         </Link>
         <Link
           className="usstock-link"
-          style={{ margin: "top", marginRight: "25px" }}
+          style={{ margin: "top", marginRight: "19px" }}
           href="/usstock"
         >
           DJI
         </Link>
         <Link
           className="usstock-link"
-          style={{ margin: "top", marginRight: "25px" }}
+          style={{ margin: "top", marginRight: "0px" }}
           href="https://general-crypto-listing.vercel.app/"
           replace
         >
