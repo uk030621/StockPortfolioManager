@@ -398,25 +398,40 @@ export default function Home() {
         Submit
       </button>
 
-      <p style={{ fontSize: "0.8rem", marginBottom: "2px", color: "grey" }}>
-        Change from baseline:
-      </p>
-      <h4 className="statistics">
-        <span
-          className={getColorClass(deviation.absoluteDeviation)}
-          style={{ marginRight: "20px" }}
+      {isLoading ? (
+        <p
+          style={{
+            fontSize: "0.9rem",
+            color: "grey",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
         >
-          £
-          {deviation.absoluteDeviation.toLocaleString("en-GB", {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          })}
-        </span>
+          Loading results data...
+        </p>
+      ) : (
+        <>
+          <p style={{ fontSize: "0.8rem", marginBottom: "2px", color: "grey" }}>
+            Change from baseline:
+          </p>
+          <h4 className="statistics">
+            <span
+              className={getColorClass(deviation.absoluteDeviation)}
+              style={{ marginRight: "20px" }}
+            >
+              £
+              {deviation.absoluteDeviation.toLocaleString("en-GB", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
+            </span>
 
-        <span className={getColorClass(deviation.percentageChange)}>
-          {deviation.percentageChange.toFixed(2)}%
-        </span>
-      </h4>
+            <span className={getColorClass(deviation.percentageChange)}>
+              {deviation.percentageChange.toFixed(2)}%
+            </span>
+          </h4>
+        </>
+      )}
 
       {/*<a className='hyperlink1' href="https://uk.finance.yahoo.com/lookup" target="_blank" rel="noopener noreferrer" >Link - <span className='symbol-lookup'>symbol lookup</span> </a>*/}
       <Link className="stock-symbol-search" href="/symbolsearch">
