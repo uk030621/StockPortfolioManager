@@ -400,7 +400,7 @@ export default function Home() {
             marginBottom: "10px",
           }}
         >
-          Loading results data...
+          Loading baseline comparison data...
         </p>
       ) : (
         <>
@@ -544,7 +544,16 @@ export default function Home() {
 
       {/* Stock Table */}
       {isLoading ? (
-        <p>Loading...</p>
+        <p
+          style={{
+            fontSize: "0.9rem",
+            color: "grey",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
+          Loading table...
+        </p>
       ) : (
         <table
           style={{ margin: "0 auto", borderCollapse: "collapse", width: "80%" }}
