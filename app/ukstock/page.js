@@ -402,7 +402,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "0.9rem",
-            color: "grey",
+            color: "green",
             textAlign: "center",
             marginBottom: "10px",
           }}
@@ -554,7 +554,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "0.9rem",
-            color: "grey",
+            color: "green",
             textAlign: "center",
             marginBottom: "10px",
           }}
