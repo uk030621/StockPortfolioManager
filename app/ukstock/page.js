@@ -401,13 +401,14 @@ export default function Home() {
       {isLoading ? (
         <p
           style={{
-            fontSize: "0.9rem",
-            color: "green",
+            fontSize: "1rem",
+            color: "red",
             textAlign: "center",
             marginBottom: "10px",
+            fontWeight: "bold", // Add this line to make text bold
           }}
         >
-          Loading baseline comparison data...
+          Calculating...
         </p>
       ) : (
         <>
@@ -553,10 +554,11 @@ export default function Home() {
       {isLoading ? (
         <p
           style={{
-            fontSize: "0.9rem",
-            color: "green",
+            fontSize: "1rem",
+            color: "red",
             textAlign: "center",
             marginBottom: "10px",
+            fontWeight: "bold", // Add this line to make text bold
           }}
         >
           Loading table...
