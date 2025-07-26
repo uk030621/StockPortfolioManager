@@ -435,7 +435,7 @@ export default function Home() {
         Currency Converter
       </Link>
 
-      <div style={{ marginTop: "10px" }}>
+      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Link
           className="usstock-link"
           style={{ margin: "top", marginRight: "21px" }}

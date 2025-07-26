@@ -92,11 +92,14 @@ td {
   text-decoration: none;
   font-size: small;
   margin-right: 0px;
-  color: grey;
+  background-color: slategray;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
 }
 
 .currency-link:hover {
-  color: black;
+  color: white;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -287,11 +290,14 @@ button:hover {
 .usstock-link {
   text-decoration: none;
   font-size: small;
-  color: grey;
+  background-color: slategray;
+  padding: 4px 10px;
+  border-radius: 4px; /* medium typically ~4px */
+  color: white;
 }
 
 .usstock-link:hover {
-  color: black;
+  color: white;
   font-weight: bolder;
 }
 
@@ -314,11 +320,14 @@ a.stock-symbol-search {
   text-decoration: none;
   margin-right: 20px;
   font-size: small;
-  color: grey;
+  background-color: slategray;
+  padding: 4px 15px;
+  border-radius: 4px; /* medium typically ~4px */
+  color: white;
 }
 
 .stock-symbol-search:hover {
-  color: black;
+  color: white;
   font-weight: bolder;
 }
 
