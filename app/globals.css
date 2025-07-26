@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
-  /*background-color: #c8f3c8;*/
+
   margin: 0;
   padding: 0;
   height: 100%;
@@ -200,6 +200,10 @@ button:hover {
 }
 
 .table-heading {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure background covers what's behind */
+  z-index: 1; /* Make sure it stays above table rows */
   color: black;
 }
 
@@ -258,7 +262,7 @@ button:hover {
 }
 
 .positive {
-  color: green;
+  color: darkgreen;
 }
 
 .negative {
@@ -290,14 +294,14 @@ button:hover {
 .usstock-link {
   text-decoration: none;
   font-size: small;
-  background-color: slategray;
+  background-color: lightgreen;
   padding: 4px 10px;
   border-radius: 4px; /* medium typically ~4px */
-  color: white;
+  color: black;
 }
 
 .usstock-link:hover {
-  color: white;
+  color: black;
   font-weight: bolder;
 }
 

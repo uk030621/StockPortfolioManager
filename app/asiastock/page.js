@@ -405,8 +405,8 @@ export default function Home() {
         </p>
       ) : (
         <>
-          <p style={{ fontSize: "0.8rem", marginBottom: "2px", color: "grey" }}>
-            Change from baseline:
+          <p style={{ fontSize: "0.8rem", marginBottom: "5px", color: "grey" }}>
+            Change from baseline
           </p>
           <h4 className="statistics">
             <span
