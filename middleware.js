@@ -13,7 +13,8 @@ export function middleware(req) {
       pathname.startsWith("/ukstock") ||
       pathname.startsWith("/usstock") ||
       pathname.startsWith("/eustock") ||
-      pathname.startsWith("/asiastock")
+      pathname.startsWith("/asiastock") ||
+      pathname.startsWith("/sharevaluechartuk")
     ) {
       return NextResponse.redirect(new URL("/login", req.nextUrl.origin));
     }
@@ -36,6 +37,7 @@ export const config = {
     "/asiastock/:path*",
     "/signup",
     "/login",
+    "/sharevaluechartuk/:path*",
     "/intro", // Add this line to include the route in middleware
     "/backtointro", // Add this line to include the route in middleware
   ],

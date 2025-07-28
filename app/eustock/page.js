@@ -413,7 +413,7 @@ export default function Home() {
               className={getColorClass(deviation.absoluteDeviation)}
               style={{ marginRight: "20px" }}
             >
-              £
+              &euro;
               {deviation.absoluteDeviation.toLocaleString("en-GB", {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
@@ -516,6 +516,9 @@ export default function Home() {
         <button className="input-stock-button" onClick={refreshAllData}>
           Refresh
         </button>
+        <Link href={"/sharevaluecharteu"}>
+          <button className="input-stock-button">Chart</button>
+        </Link>
         {/*<Link className="logout-confirm-link" href="/logout-confirmation">
           Logout
         </Link>*/}

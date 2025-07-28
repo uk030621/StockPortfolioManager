@@ -413,7 +413,7 @@ export default function Home() {
               className={getColorClass(deviation.absoluteDeviation)}
               style={{ marginRight: "20px" }}
             >
-              £
+              $
               {deviation.absoluteDeviation.toLocaleString("en-GB", {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
