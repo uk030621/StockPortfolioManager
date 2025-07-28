@@ -516,6 +516,9 @@ export default function Home() {
         <button className="input-stock-button" onClick={refreshAllData}>
           Refresh
         </button>
+        <Link href={"/sharevaluechartasia"}>
+          <button className="input-stock-button">Chart</button>
+        </Link>
         {/*<Link className="logout-confirm-link" href="/logout-confirmation">
           Logout
         </Link>*/}

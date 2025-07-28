@@ -30,7 +30,7 @@ export default function ShareValueChartPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/api/eustock");
+      const res = await fetch("/api/asiastock");
       const rawData = await res.json();
 
       const cleaned = rawData
@@ -65,7 +65,7 @@ export default function ShareValueChartPage() {
         fill="black"
         fontSize={isMobile ? 8 : 12}
       >
-        &euro;{Math.ceil(value).toLocaleString()}
+        &yen;{Math.ceil(value).toLocaleString()}
       </text>
     );
   }
@@ -89,10 +89,10 @@ export default function ShareValueChartPage() {
           color: "#2D3748",
         }}
       >
-        DAX Stock Chart
+        Nikkei Stock Chart
       </h2>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Link href={"/eustock"}>
+        <Link href={"/asiastock"}>
           <button className="input-stock-button">Home</button>
         </Link>
       </div>
@@ -107,7 +107,7 @@ export default function ShareValueChartPage() {
       >
         Indicative Value:{" "}
         <span className="total-value">
-          &euro;
+          &yen;
           {totalPortfolioValue.toLocaleString("en-GB", {
             minimumFractionDigits: 0,
             maximumFractionDigits: 0,
@@ -144,13 +144,13 @@ export default function ShareValueChartPage() {
             />
             <YAxis
               tickFormatter={(value) =>
-                `€${Math.ceil(value / 1000).toLocaleString()}K`
+                `¥${Math.ceil(value / 1000).toLocaleString()}K`
               }
               fontSize={isMobile ? 10 : 12}
             />
             <Tooltip
               formatter={(value) => [
-                `€${Math.ceil(value).toLocaleString()}`,
+                `¥${Math.ceil(value).toLocaleString()}`,
                 "Value",
               ]}
             />

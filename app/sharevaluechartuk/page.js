@@ -62,8 +62,8 @@ export default function ShareValueChartPage() {
         y={centerY}
         transform={`rotate(-90, ${centerX}, ${centerY})`}
         textAnchor="end"
-        fill="grey"
-        fontSize={isMobile ? 8 : 12}
+        fill="black"
+        fontSize={isMobile ? 9 : 12}
       >
         £{Math.ceil(value).toLocaleString()}
       </text>
