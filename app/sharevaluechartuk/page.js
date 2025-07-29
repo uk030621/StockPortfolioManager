@@ -20,6 +20,7 @@ export default function ShareValueChartPage() {
   const [chartData, setChartData] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
   const [filterLimit, setFilterLimit] = useState(10);
+  const [totalPortfolioValue, setTotalPortfolioValue] = useState(0);
   const [chartType, setChartType] = useState("bar"); // "bar" or "pie"
 
   useEffect(() => {
@@ -45,6 +46,10 @@ export default function ShareValueChartPage() {
         .sort((a, b) => b.totalValue - a.totalValue);
 
       setChartData(cleaned);
+
+      // Compute total portfolio value
+      const total = cleaned.reduce((acc, stock) => acc + stock.totalValue, 0);
+      setTotalPortfolioValue(total);
     }
 
     fetchData();
@@ -56,13 +61,19 @@ export default function ShareValueChartPage() {
     if (!value || isNaN(value)) return null;
 
     const centerX = x + width / 1.3;
-    const centerY = y - 45;
+    const centerY = y - 35;
+    const centerXbig = x + width / 2;
+    const centerYbig = y - 50;
+
+    const finalX = isMobile ? centerX : centerXbig;
+    const finalY = isMobile ? centerY : centerYbig;
+    const rotationAngle = isMobile ? -90 : -90;
 
     return (
       <text
-        x={centerX}
-        y={centerY}
-        transform={`rotate(-90, ${centerX}, ${centerY})`}
+        x={finalX}
+        y={finalY}
+        transform={`rotate(${rotationAngle}, ${finalX}, ${finalY})`}
         textAnchor="end"
         fill="slategray"
         fontSize={isMobile ? 9 : 12}
@@ -100,6 +111,7 @@ export default function ShareValueChartPage() {
           fontSize: isMobile ? "1.5rem" : "2rem",
           fontWeight: "600",
           marginBottom: "0.5rem",
+          marginTop: isMobile ? "0.5rem" : "1rem",
           color: "#2D3748",
         }}
       >
@@ -116,6 +128,24 @@ export default function ShareValueChartPage() {
           <button className="input-stock-button">Home</button>
         </Link>
       </div>
+      {/* 🟢 Indicative Value */}
+      <h2
+        className="sub-heading"
+        style={{
+          textAlign: "center",
+          fontSize: isMobile ? "1rem" : "1.25rem",
+          marginBottom: isMobile ? "1rem" : "2rem",
+        }}
+      >
+        Indicative Value:{" "}
+        <span className="total-value">
+          $
+          {totalPortfolioValue.toLocaleString("en-GB", {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          })}
+        </span>
+      </h2>
       {/* Filter & Chart Toggle */}
       <div
         style={{
@@ -132,7 +162,7 @@ export default function ShareValueChartPage() {
             id="filter"
             value={filterLimit}
             onChange={(e) => setFilterLimit(Number(e.target.value))}
-            style={{ marginLeft: "0.5rem", padding: "0.4rem" }}
+            style={{ marginLeft: "0.5rem", padding: "0.5rem" }}
           >
             <option value={5}>Top 5</option>
             <option value={10}>Top 10</option>
@@ -147,7 +177,7 @@ export default function ShareValueChartPage() {
             id="chartType"
             value={chartType}
             onChange={(e) => setChartType(e.target.value)}
-            style={{ marginLeft: "0.5rem", padding: "0.4rem" }}
+            style={{ marginLeft: "0.5rem", padding: "0.5rem" }}
           >
             <option value="bar">Bar</option>
             <option value="pie">Pie</option>
@@ -169,9 +199,9 @@ export default function ShareValueChartPage() {
           <BarChart
             data={filteredData}
             margin={{
-              top: 50,
+              top: 70,
               right: 30,
-              left: 50,
+              left: 0,
               bottom: isMobile ? 100 : 80,
             }}
           >
@@ -185,7 +215,9 @@ export default function ShareValueChartPage() {
               height={isMobile ? 100 : 60}
             />
             <YAxis
-              tickFormatter={(value) => `£${Math.ceil(value).toLocaleString()}`}
+              tickFormatter={(value) =>
+                `£${Math.ceil(value / 1000).toLocaleString()}K`
+              }
               fontSize={isMobile ? 10 : 12}
             />
             <Tooltip
