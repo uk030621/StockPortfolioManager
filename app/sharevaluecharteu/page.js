@@ -12,7 +12,7 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
-  LabelList,
+  //LabelList,
 } from "recharts";
 import Link from "next/link";
 
@@ -57,7 +57,8 @@ export default function ShareValueChartPage() {
 
   const filteredData = chartData.slice(0, filterLimit);
 
-  const CustomLabel = ({ x, y, value, width }) => {
+  {
+    /*const CustomLabel = ({ x, y, value, width }) => {
     if (!value || isNaN(value)) return null;
 
     const centerX = x + width / 1.3;
@@ -78,10 +79,11 @@ export default function ShareValueChartPage() {
         fill="slategray"
         fontSize={isMobile ? 9 : 12}
       >
-        €{Math.ceil(value).toLocaleString()}
+        ¥{Math.ceil(value).toLocaleString()}
       </text>
     );
-  };
+  };*/
+  }
 
   const COLORS = [
     "#8884d8",
@@ -102,7 +104,7 @@ export default function ShareValueChartPage() {
         margin: "0 auto",
         width: "95%",
         maxWidth: "1200px",
-        padding: isMobile ? "1rem" : "2rem",
+        padding: isMobile ? "0rem" : "0rem",
       }}
     >
       <h2
@@ -124,7 +126,7 @@ export default function ShareValueChartPage() {
           marginBottom: "1rem",
         }}
       >
-        <Link href={"/ukstock"}>
+        <Link href={"/eustock"}>
           <button className="input-stock-button">Home</button>
         </Link>
       </div>
@@ -227,7 +229,7 @@ export default function ShareValueChartPage() {
               ]}
             />
             <Bar dataKey="totalValue" fill="#4299E1" radius={[4, 4, 0, 0]}>
-              <LabelList dataKey="totalValue" content={CustomLabel} />
+              {/*<LabelList dataKey="totalValue" content={CustomLabel} />*/}
             </Bar>
           </BarChart>
         ) : (
