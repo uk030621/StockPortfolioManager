@@ -135,58 +135,48 @@ export default function StockSearchPage() {
 
       <div style={{ marginTop: "20px", textAlign: "center" }}>
         <p className="return-to-stock">Return to Stock: </p>
-        <Link className="stock-symbol-search" href="/ukstock">
-          <span>
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+          <Link href="/ukstock">
             <Image
               className="uk-pic"
               src="/UKFlag.jpg"
-              alt="Portfolio Image"
-              width={40} // Adjust the width
-              height={40} // Adjust the height
-              priority={true}
-              style={{ marginLeft: "5px" }} // Add margin for spacing
-            />
-          </span>
-        </Link>
-        <Link className="stock-symbol-search" href="/usstock">
-          <span>
-            <Image
-              className="uk-pic"
-              src="/USFLAG.jpg"
-              alt="Portfolio Image"
-              width={40} // Adjust the width
-              height={40} // Adjust the height
-              priority={true}
-              style={{ marginLeft: "5px" }} // Add margin for spacing
-            />
-          </span>
-        </Link>
-        <Link className="stock-symbol-search" href="/asiastock">
-          <span>
-            <Image
-              className="uk-pic"
-              src="/Japan.jpg"
-              alt="Portfolio Image"
-              width={40} // Adjust the width
-              height={40} // Adjust the height
-              priority={true}
-              style={{ marginLeft: "5px" }} // Add margin for spacing
-            />
-          </span>
-        </Link>
-        <Link className="stock-symbol-search" href="/eustock">
-          <span>
-            <Image
-              className="uk-pic"
-              src="/germany.jpg"
-              alt="Portfolio Image"
+              alt="UK"
               width={40}
               height={40}
               priority={true}
-              style={{ marginLeft: "5px" }}
             />
-          </span>
-        </Link>
+          </Link>
+          <Link href="/usstock">
+            <Image
+              className="uk-pic"
+              src="/USFLAG.jpg"
+              alt="US"
+              width={40}
+              height={40}
+              priority={true}
+            />
+          </Link>
+          <Link href="/asiastock">
+            <Image
+              className="uk-pic"
+              src="/Japan.jpg"
+              alt="Japan"
+              width={40}
+              height={40}
+              priority={true}
+            />
+          </Link>
+          <Link href="/eustock">
+            <Image
+              className="uk-pic"
+              src="/germany.jpg"
+              alt="Germany"
+              width={40}
+              height={40}
+              priority={true}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

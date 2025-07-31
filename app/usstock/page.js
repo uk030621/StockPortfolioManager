@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [stocks, setStocks] = useState([]);
-  const [previousPrices, setPreviousPrices] = useState({}); // Store previous prices
+  //const [previousPrices, setPreviousPrices] = useState({}); // Store previous prices
   const [totalPortfolioValue, setTotalPortfolioValue] = useState(0);
   const [gdaxiValue, setGdaxiValue] = useState(null); // Initialize GdaxiValue using useState
   const [newStock, setNewStock] = useState({ symbol: "", sharesHeld: "" });
@@ -244,7 +244,8 @@ export default function Home() {
     }
   };
 
-  const getPriceChangeColor = (symbol, currentPrice) => {
+  {
+    /*const getPriceChangeColor = (symbol, currentPrice) => {
     const previousPrice = previousPrices[symbol];
 
     if (previousPrice === undefined) return ""; // Neutral if no previous price
@@ -254,7 +255,8 @@ export default function Home() {
     console.log("Previous Price:", previousPrice);
     if (currentPrice < previousPrice) return "red"; // Price decreased
     return ""; // No change, neutral
-  };
+  };*/
+  }
 
   const startEditing = (stock) => {
     setIsEditing(true);

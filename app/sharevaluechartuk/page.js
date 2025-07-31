@@ -141,7 +141,7 @@ export default function ShareValueChartPage() {
       >
         Indicative Value:{" "}
         <span className="total-value">
-          $
+          £
           {totalPortfolioValue.toLocaleString("en-GB", {
             minimumFractionDigits: 0,
             maximumFractionDigits: 0,
